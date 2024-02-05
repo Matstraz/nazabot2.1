@@ -12,19 +12,19 @@ export default function Homepage() {
   }
 
   return (
-    <div className="bg-slate-800 relative h-screen w-screen flex flex-col justify-center items-center gap-8">
+    <div className="bg-slate-800 relative h-screen w-screen flex flex-col justify-center items-center gap-8 md:gap-2 lg:gap-8">
       <div
         className={
-          show ? `top-5 left-5 text-6xl text-white text-center` : `hidden`
+          show
+            ? `top-5 left-5 text-6xl md:text-4xl lg:text-6xl text-white text-center`
+            : `hidden`
         }
       >
         {score}
       </div>
       <div
         className={
-          show
-            ? `h-96 w-full md:h-full h md:w-2/5 lg:h-4/5 h lg:w-2/5`
-            : `hidden`
+          show ? `h-96 w-full md:h-5/6 md:w-2/5 lg:h-4/5 h lg:w-2/5` : `hidden`
         }
       >
         <Snake
