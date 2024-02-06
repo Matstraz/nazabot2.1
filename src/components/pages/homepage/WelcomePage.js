@@ -1,12 +1,13 @@
-import styles from "../utils/Animations";
+import styles from "../../utils/Animations";
 import { css } from "aphrodite";
-import sleeping from "../../assets/pics/welcomepage/sleeping.png";
-import pokemon from "../../assets/pics/welcomepage/pokemon.png";
-import bear from "../../assets/pics/welcomepage/bear.png";
-import hurted from "../../assets/pics/welcomepage/hurted.png";
-import honest from "../../assets/pics/welcomepage/honest.png";
-import ninja from "../../assets/pics/welcomepage/ninja.png";
-import ninjabig from "../../assets/pics/welcomepage/ninjabig.png";
+import sleeping from "../../../assets/pics/welcomepage/sleeping.png";
+import pokemon from "../../../assets/pics/welcomepage/pokemon.png";
+import bear from "../../../assets/pics/welcomepage/bear.png";
+import hurted from "../../../assets/pics/welcomepage/hurted.png";
+import honest from "../../../assets/pics/welcomepage/honest.png";
+import ninja from "../../../assets/pics/welcomepage/ninja.png";
+import ninjabig from "../../../assets/pics/welcomepage/ninjabig.png";
+import ugly from "../../../assets/pics/welcomepage/ugly.png";
 
 export default function WelcomePage({ show }) {
   return (
@@ -22,18 +23,18 @@ export default function WelcomePage({ show }) {
         Pick your favorite Naza
       </div>
       <div className=" flex justify-center items-center">
-        <img className="w-11/12" src={ninja} alt="ninja" />
+        <img className="w-11/12 cursor-pointer" src={ninja} alt="ninja" />
       </div>
 
       {/*  row 2*/}
       <div className=" flex justify-center items-center">
-        <img className="w-7/12" src={bear} alt="bear" />
+        <img className="w-7/12 cursor-pointer" src={bear} alt="bear" />
       </div>
       <div className=" flex justify-center items-center">
-        <img className="w-11/12" src={honest} alt="honest" />
+        <img className="w-11/12 cursor-pointer" src={honest} alt="honest" />
       </div>
       <div className=" flex justify-center items-center">
-        <img className="w-11/12" src={pokemon} alt="pokemon" />
+        <img className="w-11/12 cursor-pointer" src={pokemon} alt="pokemon" />
       </div>
       {/*  row 3 */}
       <div className="col-span-3 flex flex-col justify-center items-center">
@@ -42,17 +43,17 @@ export default function WelcomePage({ show }) {
       </div>
       {/*  row 4 */}
       <div className=" flex justify-center items-center">
-        <img className="w-7/12" src={ninjabig} alt="ninjabig" />
+        <img className="w-7/12 cursor-pointer" src={ninjabig} alt="ninjabig" />
       </div>
       <div className=" flex justify-center items-center">
-        <img className="w-11/12" src={hurted} alt="hurted" />
+        <img className="w-11/12 cursor-pointer" src={hurted} alt="hurted" />
       </div>
       <div className="flex justify-center items-center">
-        <img className="w-11/12" src={sleeping} alt="sleeping" />
+        <img className="w-11/12 cursor-pointer" src={sleeping} alt="sleeping" />
       </div>
       {/*  row 5*/}
-      <div className=" flex justify-center items-center">
-        {/*       <img className="" /> */}
+      <div className=" flex justify-center items-center ">
+        <img className="w-11/12 cursor-pointer" src={ugly} alt="ugly" />
       </div>
 
       <div className="col-span-2 text-xl flex justify-center items-center">
