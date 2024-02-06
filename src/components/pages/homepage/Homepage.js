@@ -3,9 +3,20 @@ import noblock from "../../../assets/pics/homepage/noblock.png";
 import SnakeGames from "./SnakeGame";
 import WelcomePage from "./WelcomePage";
 
-export default function Homepage() {
+export default function Homepage({
+  show,
+  setShow,
+  setSleeping1,
+  setPokemon1,
+  setBear1,
+  setHurted1,
+  setHonest1,
+  setNinja1,
+  setNinjabig1,
+  setUgly1,
+}) {
   let [score, setScore] = useState(-1);
-  let [show, setShow] = useState(true);
+
   let [show2, setShow2] = useState(false);
 
   return (
@@ -51,7 +62,17 @@ export default function Homepage() {
         setShow={setShow}
         setShow2={setShow2}
       />
-      <WelcomePage show={show} />
+      <WelcomePage
+        show={show}
+        setSleeping1={setSleeping1}
+        setPokemon1={setPokemon1}
+        setBear1={setBear1}
+        setHurted1={setHurted1}
+        setHonest1={setHonest1}
+        setNinja1={setNinja1}
+        setNinjabig1={setNinjabig1}
+        setUgly1={setUgly1}
+      />
     </div>
   );
 }

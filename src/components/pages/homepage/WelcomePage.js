@@ -8,8 +8,20 @@ import honest from "../../../assets/pics/welcomepage/honest.png";
 import ninja from "../../../assets/pics/welcomepage/ninja.png";
 import ninjabig from "../../../assets/pics/welcomepage/ninjabig.png";
 import ugly from "../../../assets/pics/welcomepage/ugly.png";
+import { useNavigate } from "react-router";
 
-export default function WelcomePage({ show }) {
+export default function WelcomePage({
+  show,
+  setSleeping1,
+  setPokemon1,
+  setBear1,
+  setHurted1,
+  setHonest1,
+  setNinja1,
+  setNinjabig1,
+  setUgly1,
+}) {
+  const navigate = useNavigate();
   return (
     <div
       className={
@@ -53,7 +65,15 @@ export default function WelcomePage({ show }) {
       </div>
       {/*  row 5*/}
       <div className=" flex justify-center items-center ">
-        <img className="w-11/12 cursor-pointer" src={ugly} alt="ugly" />
+        <img
+          className="w-11/12 cursor-pointer"
+          src={ugly}
+          alt="ugly"
+          onClick={() => {
+            setUgly1(true);
+            navigate("/choise");
+          }}
+        />
       </div>
 
       <div className="col-span-2 text-xl flex justify-center items-center">

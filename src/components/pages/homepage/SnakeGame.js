@@ -12,7 +12,7 @@ export default function SnakeGames({
   }
 
   function gameOver() {
-    setScore(-1);
+    setScore(0);
     setShow2(true);
   }
   return (
