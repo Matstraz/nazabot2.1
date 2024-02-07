@@ -53,7 +53,6 @@ function App() {
             setNinjabig1={setNinjabig1}
             ugly1={ugly1}
             setUgly1={setUgly1}
-            show={show}
             setShow={setShow}
           />
         }

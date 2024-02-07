@@ -24,7 +24,7 @@ export default function Homepage({
       <div
         className={
           show
-            ? `top-5 left-5 text-6xl md:text-4xl lg:text-6xl text-white text-center flex justify-center items-center w-full md:w-2/5 lg:w-2/5`
+            ? `top-5 left-5 text-6xl md:text-4xl lg:text-6xl text-slate-200 text-center flex justify-center items-center w-full md:w-2/5 lg:w-2/5`
             : `hidden`
         }
       >
@@ -49,8 +49,8 @@ export default function Homepage({
         <div className="w-1/2">
           <fieldset class="border border-solid border-slate-300 py-1 w-11/12">
             <legend class="text-base font-bold">High scores</legend>
-            <p className="text-sm text-orange-400">1st Naza . . . . . . . 10</p>
-            <p className="text-sm text-cyan-300">2nd Girex . . . . . . . 9</p>
+            <p className="text-sm text-orange-400">1st Naza . . . . . . . 9</p>
+            <p className="text-sm text-cyan-300">2nd Girex . . . . . . . 8</p>
             <p className="text-sm text-cyan-300">3rd Peco . . . . . . . . 1 </p>
           </fieldset>
         </div>

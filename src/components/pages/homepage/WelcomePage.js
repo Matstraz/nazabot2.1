@@ -27,7 +27,7 @@ export default function WelcomePage({
       className={
         show
           ? `hidden`
-          : `text-5xl text-white text-center h-full w-full grid grid-cols-3 grid-rows-5`
+          : `text-5xl text-slate-200 text-center h-full w-full grid grid-cols-3 grid-rows-5`
       }
     >
       {/*  row 1 */}
@@ -35,18 +35,50 @@ export default function WelcomePage({
         Pick your favorite Naza
       </div>
       <div className=" flex justify-center items-center">
-        <img className="w-11/12 cursor-pointer" src={ninja} alt="ninja" />
+        <img
+          className="w-11/12 cursor-pointer"
+          src={ninja}
+          alt="ninja"
+          onClick={() => {
+            setNinja1(true);
+            navigate("/choise");
+          }}
+        />
       </div>
 
       {/*  row 2*/}
       <div className=" flex justify-center items-center">
-        <img className="w-7/12 cursor-pointer" src={bear} alt="bear" />
+        <img
+          className="w-7/12 cursor-pointer"
+          src={bear}
+          alt="bear"
+          onClick={() => {
+            setBear1(true);
+            navigate("/choise");
+          }}
+        />
       </div>
       <div className=" flex justify-center items-center">
-        <img className="w-11/12 cursor-pointer" src={honest} alt="honest" />
+        <img
+          className="w-11/12 cursor-pointer"
+          src={honest}
+          alt="honest"
+          onClick={() => {
+            setHonest1(true);
+            navigate("/choise");
+          }}
+        />
       </div>
       <div className=" flex justify-center items-center">
-        <img className="w-11/12 cursor-pointer" src={pokemon} alt="pokemon" />
+        <img
+          className="w-11/12 cursor-pointer"
+          src={pokemon}
+          alt="pokemon"
+          onClick={() => {
+            setPokemon1(true);
+            navigate("/choise");
+          }}
+        />
       </div>
       {/*  row 3 */}
       <div className="col-span-3 flex flex-col justify-center items-center">
@@ -55,13 +87,37 @@ export default function WelcomePage({
       </div>
       {/*  row 4 */}
       <div className=" flex justify-center items-center">
-        <img className="w-7/12 cursor-pointer" src={ninjabig} alt="ninjabig" />
+        <img
+          className="w-7/12 cursor-pointer"
+          src={ninjabig}
+          alt="ninjabig"
+          onClick={() => {
+            setNinjabig1(true);
+            navigate("/choise");
+          }}
+        />
       </div>
       <div className=" flex justify-center items-center">
-        <img className="w-11/12 cursor-pointer" src={hurted} alt="hurted" />
+        <img
+          className="w-11/12 cursor-pointer"
+          src={hurted}
+          alt="hurted"
+          onClick={() => {
+            setHurted1(true);
+            navigate("/choise");
+          }}
+        />
       </div>
       <div className="flex justify-center items-center">
-        <img className="w-11/12 cursor-pointer" src={sleeping} alt="sleeping" />
+        <img
+          className="w-11/12 cursor-pointer"
+          src={sleeping}
+          alt="sleeping"
+          onClick={() => {
+            setSleeping1(true);
+            navigate("/choise");
+          }}
+        />
       </div>
       {/*  row 5*/}
       <div className=" flex justify-center items-center ">
