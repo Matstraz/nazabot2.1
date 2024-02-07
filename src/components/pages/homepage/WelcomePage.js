@@ -36,7 +36,7 @@ export default function WelcomePage({
       </div>
       <div className=" flex justify-center items-center">
         <img
-          className="w-11/12 cursor-pointer"
+          className="w-11/12 md:w-2/12 cursor-pointer"
           src={ninja}
           alt="ninja"
           onClick={() => {
@@ -49,7 +49,7 @@ export default function WelcomePage({
       {/*  row 2*/}
       <div className=" flex justify-center items-center">
         <img
-          className="w-7/12 cursor-pointer"
+          className="w-7/12 md:w-2/12 cursor-pointer"
           src={bear}
           alt="bear"
           onClick={() => {
@@ -60,7 +60,7 @@ export default function WelcomePage({
       </div>
       <div className=" flex justify-center items-center">
         <img
-          className="w-11/12 cursor-pointer"
+          className="w-11/12 md:w-3/12  cursor-pointer"
           src={honest}
           alt="honest"
           onClick={() => {
@@ -69,37 +69,10 @@ export default function WelcomePage({
           }}
         />
       </div>
-      <div className=" flex justify-center items-center">
+
+      <div className="flex justify-center items-center">
         <img
-          className="w-11/12 cursor-pointer"
-          src={pokemon}
-          alt="pokemon"
-          onClick={() => {
-            setPokemon1(true);
-            navigate("/choise");
-          }}
-        />
-      </div>
-      {/*  row 3 */}
-      <div className="col-span-3 flex flex-col justify-center items-center">
-        <p className={`${css(styles.slideInLeft)}`}>WELCOME TO</p>
-        <p className={`${css(styles.slideInRight)} font-bold`}>NAZABOT 2.1</p>
-      </div>
-      {/*  row 4 */}
-      <div className=" flex justify-center items-center">
-        <img
-          className="w-7/12 cursor-pointer"
-          src={ninjabig}
-          alt="ninjabig"
-          onClick={() => {
-            setNinjabig1(true);
-            navigate("/choise");
-          }}
-        />
-      </div>
-      <div className=" flex justify-center items-center">
-        <img
-          className="w-11/12 cursor-pointer"
+          className="w-11/12 md:w-2/12 cursor-pointer"
           src={hurted}
           alt="hurted"
           onClick={() => {
@@ -108,9 +81,27 @@ export default function WelcomePage({
           }}
         />
       </div>
+
+      {/*  row 3 */}
+      <div className="col-span-3 flex flex-col justify-center items-center">
+        <p className={`${css(styles.slideInLeft)}`}>WELCOME TO</p>
+        <p className={`${css(styles.slideInRight)} font-bold`}>NAZABOT 2.1</p>
+      </div>
+      {/*  row 4 */}
+      <div className=" flex justify-center items-center">
+        <img
+          className="w-11/12 md:w-3/12 cursor-pointer"
+          src={pokemon}
+          alt="pokemon"
+          onClick={() => {
+            setPokemon1(true);
+            navigate("/choise");
+          }}
+        />
+      </div>
       <div className="flex justify-center items-center">
         <img
-          className="w-11/12 cursor-pointer"
+          className="w-11/12 md:w-3/12 cursor-pointer"
           src={sleeping}
           alt="sleeping"
           onClick={() => {
@@ -119,10 +110,22 @@ export default function WelcomePage({
           }}
         />
       </div>
+      <div className=" flex justify-center items-center">
+        <img
+          className="w-7/12 md:w-2/12 cursor-pointer"
+          src={ninjabig}
+          alt="ninjabig"
+          onClick={() => {
+            setNinjabig1(true);
+            navigate("/choise");
+          }}
+        />
+      </div>
+
       {/*  row 5*/}
       <div className=" flex justify-center items-center ">
         <img
-          className="w-11/12 cursor-pointer"
+          className="w-11/12 md:w-2/12 cursor-pointer"
           src={ugly}
           alt="ugly"
           onClick={() => {

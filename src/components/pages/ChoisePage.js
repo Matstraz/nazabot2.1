@@ -7,6 +7,9 @@ import sleeping from "../../assets/pics/welcomepage/sleeping.png";
 import hurted from "../../assets/pics/welcomepage/hurted.png";
 import honest from "../../assets/pics/welcomepage/honest.png";
 import pokemon from "../../assets/pics/welcomepage/pokemon.png";
+import albacio from "../../assets/pics/homepage/albacio.png";
+import wurm from "../../assets/pics/homepage/wurm.png";
+import { useState } from "react";
 
 export default function ChoisePage({
   setShow,
@@ -26,8 +29,11 @@ export default function ChoisePage({
   setNinjabig1,
   ugly1,
   setUgly1,
+  albacio1,
+  setAlbacio1,
 }) {
   const navigate = useNavigate();
+  let [show3, setShow3] = useState(false);
   function reset() {
     setShow(false);
     navigate("/");
@@ -49,8 +55,8 @@ export default function ChoisePage({
         }
       >
         <div className="flex flex-col justify-center items-center gap-6">
-          <div className="text-4xl text-center">
-            Hai scelto NAZA BEAR COL PIGIAMINO!
+          <div className="text-4xl text-center px-1">
+            Hai scelto <br /> NAZA BEAR COL PIGIAMINO!
           </div>
           <img src={bear} alt="bear" className="w-20" />
         </div>
@@ -90,7 +96,9 @@ export default function ChoisePage({
         }
       >
         <div className="flex flex-col justify-center items-center gap-6">
-          <div className="text-4xl text-center">Hai scelto NAZAUGLY!</div>
+          <div className="text-4xl text-center px-1">
+            Hai scelto <br /> UGLY NAZA!
+          </div>
           <img src={ugly} alt="ugly" className="w-36" />
         </div>
 
@@ -128,8 +136,8 @@ export default function ChoisePage({
         }
       >
         <div className="flex flex-col justify-center items-center gap-6">
-          <div className="text-4xl text-center">
-            Hai scelto NAZA, NINJA TRADITORE DELLA FOGLIA!
+          <div className="text-4xl text-center px-1">
+            Hai scelto <br /> NAZA, NINJA TRADITORE DELLA FOGLIA!
           </div>
           <img src={ninja} alt="ugly" className="w-36" />
         </div>
@@ -170,8 +178,8 @@ export default function ChoisePage({
         }
       >
         <div className="flex flex-col justify-center items-center gap-6">
-          <div className="text-4xl text-center">
-            Hai scelto NAZA, NINJA (FINTO) TRADITORE DELLA FOGLIA!
+          <div className="text-4xl text-center px-1">
+            Hai scelto <br /> NAZA, NINJA (FINTO) TRADITORE DELLA FOGLIA!
           </div>
           <img src={ninjabig} alt="ugly" className="w-24" />
         </div>
@@ -215,7 +223,9 @@ export default function ChoisePage({
         }
       >
         <div className="flex flex-col justify-center items-center gap-6">
-          <div className="text-4xl text-center">Hai scelto SLEEPING NAZA</div>
+          <div className="text-4xl text-center px-1">
+            Hai scelto <br /> SLEEPING NAZA
+          </div>
           <img src={sleeping} alt="ugly" className="w-40" />
         </div>
 
@@ -254,7 +264,9 @@ export default function ChoisePage({
         }
       >
         <div className="flex flex-col justify-center items-center gap-6">
-          <div className="text-4xl text-center">Hai scelto HURTED NAZA</div>
+          <div className="text-4xl text-center px-1">
+            Hai scelto <br /> HURTED NAZA
+          </div>
           <img src={hurted} alt="ugly" className="w-40" />
         </div>
 
@@ -294,7 +306,9 @@ export default function ChoisePage({
         }
       >
         <div className="flex flex-col justify-center items-center gap-6">
-          <div className="text-4xl text-center">Hai scelto NAZA POKEMON</div>
+          <div className="text-4xl text-center px-1">
+            Hai scelto <br /> NAZA POKEMON
+          </div>
           <img src={pokemon} alt="ugly" className="w-40" />
         </div>
 
@@ -334,7 +348,9 @@ export default function ChoisePage({
         }
       >
         <div className="flex flex-col justify-center items-center gap-6">
-          <div className="text-4xl text-center">Hai scelto HONEST NAZA</div>
+          <div className="text-4xl text-center px-1">
+            Hai scelto <br /> HONEST NAZA
+          </div>
           <img src={honest} alt="ugly" className="w-40" />
         </div>
 
@@ -367,12 +383,87 @@ export default function ChoisePage({
         </div>
       </div>
 
+      {/* albacio */}
+      <div
+        className={
+          albacio1 ? "flex flex-col justify-start items-center gap-8" : "hidden"
+        }
+      >
+        <div className="flex flex-col justify-center items-center gap-6">
+          <div className="text-4xl text-center px-1">
+            Complimenti hai trovato <br /> NAZA AL BACIO!
+          </div>
+          <img src={albacio} alt="ugly" className="w-40" />
+        </div>
+
+        <div className="w-11/12 border-double border-4 p-2">
+          <p>
+            <span className="font-bold text-md">Carattere:</span> disponibile e
+            permessivo, non riesci a dire di no quando si parla di affetto ed
+            effusioni.
+          </p>
+          <br />
+          <p>
+            <span className="font-bold text-md">Lavoro:</span> batti le
+            principali stazioni ferroviarie con la tua immancabile borsetta
+            rossa ricoperta di lustrini.
+          </p>
+          <br />
+          <p>
+            <span className="font-bold text-md">Denaro:</span> i tuoi guadagni
+            ammontano a circa 20 euro a prestazione.
+          </p>
+          <br />
+          <p>
+            <span className="font-bold text-md">Amore:</span> dispensi amore
+            costantemente.
+          </p>
+          <br />
+          <p>
+            <span className="font-bold text-md">Magic:</span> collezioni
+            esclusivamente carte con art ambigue. Custodisci gelosamente,
+            esposta in una vetrina nella tua stanzetta, una copia foil di&nbsp;
+            <span
+              className="underline text-blue-500 cursor-pointer"
+              onClick={() => setShow3(true)}
+            >
+              questa carta
+            </span>
+            .
+          </p>
+        </div>
+        <img
+          src={wurm}
+          alt="wurm"
+          className={show3 ? "w-10/12 md:w-6/12 lg:w-3/12" : "hidden"}
+        />
+      </div>
+
       {/* RESET BUTTON */}
       <button
-        className="bg-slate-600 cursor-pointer rounded-lg px-4 py-1 pb-2"
+        className={
+          !albacio1
+            ? "bg-slate-600 cursor-pointer rounded-lg px-4 py-1 pb-2"
+            : "hidden"
+        }
         onClick={reset}
       >
         Pick Again
+      </button>
+      {/* ALBACIO BUTTON */}
+      <button
+        className={
+          albacio1
+            ? "bg-slate-600 cursor-pointer rounded-lg px-4 py-1 pb-2"
+            : "hidden"
+        }
+        onClick={() => {
+          setAlbacio1(false);
+          setShow3(false);
+          navigate("/");
+        }}
+      >
+        Go Back
       </button>
     </div>
   );

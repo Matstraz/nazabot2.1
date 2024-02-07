@@ -2,6 +2,7 @@ import { useState } from "react";
 import noblock from "../../../assets/pics/homepage/noblock.png";
 import SnakeGames from "./SnakeGame";
 import WelcomePage from "./WelcomePage";
+import { useNavigate } from "react-router";
 
 export default function Homepage({
   show,
@@ -14,10 +15,11 @@ export default function Homepage({
   setNinja1,
   setNinjabig1,
   setUgly1,
+  setAlbacio1,
 }) {
   let [score, setScore] = useState(-1);
-
   let [show2, setShow2] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="bg-slate-800 relative h-screen w-screen flex flex-col justify-center items-center gap-8 md:gap-2 lg:gap-3">
@@ -44,6 +46,10 @@ export default function Homepage({
             src={noblock}
             alt="noblock"
             className="w-6/12 md:w-4/12 lg:w-3/12"
+            onClick={() => {
+              setAlbacio1(true);
+              navigate("/choise");
+            }}
           />
         </div>
         <div className="w-1/2">

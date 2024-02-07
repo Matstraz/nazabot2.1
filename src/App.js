@@ -12,6 +12,7 @@ function App() {
   let [ninja1, setNinja1] = useState(false);
   let [ninjabig1, setNinjabig1] = useState(false);
   let [ugly1, setUgly1] = useState(false);
+  let [albacio1, setAlbacio1] = useState(false);
 
   let [show, setShow] = useState(true);
   return (
@@ -30,6 +31,7 @@ function App() {
             setUgly1={setUgly1}
             show={show}
             setShow={setShow}
+            setAlbacio1={setAlbacio1}
           />
         }
       />
@@ -53,6 +55,8 @@ function App() {
             setNinjabig1={setNinjabig1}
             ugly1={ugly1}
             setUgly1={setUgly1}
+            albacio1={albacio1}
+            setAlbacio1={setAlbacio1}
             setShow={setShow}
           />
         }
